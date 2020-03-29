@@ -6,9 +6,8 @@ module.exports = function() {
   mongoose.set("useNewUrlParser", true);
   mongoose.set("useCreateIndex", true);
   mongoose.set("useUnifiedTopology", true);
-  const db = config.get("db");
-  if (!db) {
-    throw new Error("coudln't connect to mongodb");
-  }
-  mongoose.connect(db).then(() => winston.info(`Connected to ${db}...`));
+  //const db = config.get("db");
+  const uri =
+    "mongodb+srv://theosadxen:nahar2011@cluster0-a5rdm.mongodb.net/test?retryWrites=true&w=majority";
+  mongoose.connect(uri).then(() => winston.info(`Connected to ${db}...`));
 };
