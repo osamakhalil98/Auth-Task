@@ -7,5 +7,8 @@ module.exports = function() {
   mongoose.set("useCreateIndex", true);
   mongoose.set("useUnifiedTopology", true);
   const db = config.get("db");
+  if (!db) {
+    throw new Error("coudln't connect to mongodb");
+  }
   mongoose.connect(db).then(() => winston.info(`Connected to ${db}...`));
 };
