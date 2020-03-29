@@ -1,9 +1,19 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const mongoose = require("mongoose");
 const cors = require("cors");
+mongoose.set("useFindAndModify", false);
+const uri =
+  "mongodb+srv://theosadxen:newPassword@cluster0-a5rdm.mongodb.net/auth";
+await mongoose
+  .connect(uri, {
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useNewUrlParser: true
+  })
+  .then(() => console.log("Connected to mongodb..."));
 require("./startups/routes")(app);
-require("./database/db")();
 require("./startups/win-logs");
 require("./startups/config")();
 require("./startups/prod")(app);
