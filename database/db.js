@@ -4,9 +4,6 @@ const winston = require("winston");
 const config = require("config");
 module.exports = async function() {
   mongoose.set("useFindAndModify", false);
-  //mongoose.set("useUnifiedTopology", true);
-  //const db = config.get("db");
-  //"mongodb://localhost/auth"
   const uri =
     "mongodb+srv://theosadxen:newPassword@cluster0-a5rdm.mongodb.net/auth";
   await mongoose
@@ -15,5 +12,5 @@ module.exports = async function() {
       useCreateIndex: true,
       useNewUrlParser: true
     })
-    .then(() => winston.info(`Connected to mongodb...`));
+    .then(() => console.log("Connected to mongodb..."));
 };
