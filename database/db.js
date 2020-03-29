@@ -9,7 +9,7 @@ module.exports = async function() {
   const uri =
     "mongodb+srv://theosadxen:nahar2011@cluster0-a5rdm.mongodb.net/test?retryWrites=true&w=majority";
   await mongoose
-    .connect(uri, {
+    .createConnection(uri, {
       useUnifiedTopology: true,
       useCreateIndex: true,
       useNewUrlParser: true
