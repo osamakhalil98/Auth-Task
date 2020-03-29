@@ -1,4 +1,4 @@
 {
-  "jwt-privateKey": "Task_jwt-privateKey",
+  "jwtprivateKey": "Task_jwtprivateKey",
   "db": "Task_db"
 }
