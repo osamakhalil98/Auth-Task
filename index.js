@@ -14,7 +14,7 @@ mongoose
   })
   .then(() => console.log("Connected to mongodb..."));
 require("./startups/routes")(app);
-require("./startups/win-logs");
+//require("./startups/win-logs");
 require("./startups/config")();
 require("./startups/prod")(app);
 app.use(morgan("tiny"));
