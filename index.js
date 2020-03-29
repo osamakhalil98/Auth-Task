@@ -1,0 +1,14 @@
+const express = require("express");
+const app = express();
+const morgan = require("morgan");
+const cors = require("cors");
+require("./startups/routes")(app);
+require("./database/db")();
+require("./startups/win-logs");
+require("./startups/config")();
+require("./startups/prod")(app);
+app.use(morgan("tiny"));
+app.use(cors());
+const port = process.env.PORT || 5000;
+app.listen(port);
+console.log(`Listening on port ${port}`);

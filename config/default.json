@@ -1,0 +1,4 @@
+{
+  "jwt-privateKey": "",
+  "db": "mongodb://localhost/auth"
+}
