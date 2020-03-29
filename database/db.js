@@ -8,7 +8,7 @@ module.exports = async function() {
   //const db = config.get("db");
   //"mongodb://localhost/auth"
   const uri =
-    "mongodb+srv://theosadxen:newPassword@cluster0-a5rdm.mongodb.net/test?retryWrites=true&w=majority/auth";
+    "mongodb+srv://theosadxen:newPassword@cluster0-a5rdm.mongodb.net/auth";
   await mongoose
     .connect(uri, {
       useUnifiedTopology: true,
