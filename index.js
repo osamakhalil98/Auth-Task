@@ -6,7 +6,7 @@ const cors = require("cors");
 mongoose.set("useFindAndModify", false);
 const uri =
   "mongodb+srv://theosadxen:newPassword@cluster0-a5rdm.mongodb.net/auth";
-await mongoose
+mongoose
   .connect(uri, {
     useUnifiedTopology: true,
     useCreateIndex: true,
