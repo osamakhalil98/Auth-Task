@@ -10,7 +10,7 @@ module.exports = async function() {
     "mongodb+srv://theosadxen:nahar2011@cluster0-a5rdm.mongodb.net/test?retryWrites=true&w=majority";
   await mongoose
     .connect(uri, {
-      useUnifiedTopology: true,
+      useUnifiedTopology: false,
       useCreateIndex: true,
       useNewUrlParser: true
     })
