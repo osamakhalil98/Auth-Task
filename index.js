@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("./startups/routes")(app);
-//require("./startups/win-logs");
+require("./startups/win-logs");
 require("./startups/config")();
 require("./database/db")();
 require("./startups/prod")(app);
